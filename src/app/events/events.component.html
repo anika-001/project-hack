@@ -1,0 +1,20 @@
+<div class="main">
+    <div class="title" style="margin-top: 3vh;">Event and Opportunities</div>
+    <div class="addask">
+      <div class="addaskbut" routerLink="/addevent">
+        Add a Event
+      </div>
+    </div>
+    <div class="cards">
+      <div class="card" style="width: 18rem;margin: 3vh 2vw 3vh 2vw;" *ngFor = "let x of events">
+       <img class="card-img-top" src="../../assets/images/back.png" alt="Card image cap" style="width: 18rem;margin: 2vh 0vw 2vh 0vw;">
+        <div class="card-body">
+          <a href="{{x.payload.doc.data().Link}}"> <h5 style="align-self: center;" class="card-title">{{x.payload.doc.data().EventName}}</h5>
+          <!-- <p class="card-text">{{x.payload.doc.data().Link}}</p> -->
+          <p class="card-text">{{x.payload.doc.data().email}}</p></a>
+          <a (click) = "submit(x.payload.doc.data().Hashtag)" class="btn btn-primary">#{{x.payload.doc.data().Hashtag}}</a>
+        </div>
+
+      </div>
+    </div>
+  </div>

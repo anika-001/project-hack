@@ -1,0 +1,99 @@
+.main{
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: rgb(245, 245, 245);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: fill;
+    background: #C9FFBF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFAFBD, #C9FFBF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFAFBD, #C9FFBF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
+}
+
+.formcont{
+    height: 60vh;
+    // background-color: aquamarine;
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.formtitle{
+    height: 10vh;
+    width: 100%;
+    background-color: #FFAFBD;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 200%;
+    color: white;
+} 
+
+.form{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0 20%;
+    font-size: 150%;
+    background-color: rgb(230, 230, 230);
+}
+
+.input{
+    margin: 2% 0;
+    outline: none;
+    border: none;
+    border-bottom: solid grey thin;
+    font-size: 100%;
+    height: 5vh;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.input:focus{
+    border-bottom: solid thin #6000fc;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active
+{
+    background-color: rgb(230, 230, 230);
+ -webkit-box-shadow: 0 0 0 30px rgb(230, 230, 230) inset !important;
+}
+
+.submitbut{
+    background-color: #FFAFBD;
+    width: fit-content;
+    padding: 0.5% 5%;
+    border-radius: 10px;
+    align-self: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+}
+
+@media(max-width: 700px) {
+    .formcont{
+        width: 90vw;
+        height: 90vh;
+    }
+
+    .formtitle{
+        font-size: 150%;
+    }
+
+    .form{
+        font-size: 100%;
+    }
+
+    .submitbut{
+        font-size: 150%;
+    }
+}

@@ -1,0 +1,212 @@
+.main{
+    min-height: 100vh;
+    min-width: 100vw;
+    max-width: 100vw;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.title{
+    height: 10vh;
+    width: 100%;
+    background-color: #6000fc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 200%;
+    color:white;
+}
+.month{
+    height: 5vh;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    color: #6000fc;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    font-size: 100%;
+    justify-content: center;
+    font-size: 150%;
+    font-weight: bold;
+}
+.buttons{
+    height: 8vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-evenly;
+    padding-right: 10vh;
+    padding-bottom: 2vh;
+    background-color: rgb(255, 255, 255);
+}
+
+.uploadscedule{
+    background-color: #6000fc;
+    align-self: center;
+    width: fit-content;
+    font-size: 120%;
+    padding: 0.5% 2%;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
+.viewscedule{
+    background-color: #6000fc;
+    align-self: center;
+    width: fit-content;
+    font-size: 120%;
+    padding: 0.5% 2%;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
+.todo{
+    background-color: #6000fc;
+    align-self: center;
+    width: fit-content;
+    font-size: 120%;
+    padding: 0.5% 2%;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
+.alldays{
+    min-height: 80vh;
+    min-width: 100vw;
+    max-width: 100vw;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 0.5% 0.5% 0.5% 0.5%;
+}
+
+.day{
+    height: 27vh;
+    width: 27vh;
+    background-color:rgb(230, 230, 230);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    font-size: 150%;
+    border-style: solid;
+    border-color:rgb(255, 255, 255);
+    justify-content: space-between;
+    //padding: 0% 1%;
+    padding-left: 1%;
+    //padding-top: 1%;
+}
+
+.formcont{
+    height: 60vh;
+    // background-color: aquamarine;
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    margin-top: 25vh;
+    position: fixed;
+}
+
+.formtitle{
+    height: 10vh;
+    width: 100%;
+    background-color: #6000fc;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 200%;
+    color: white;
+} 
+
+.form{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0 20%;
+    font-size: 150%;
+    background-color: rgb(230, 230, 230);
+}
+
+.input{
+    margin: 2% 0;
+    outline: none;
+    border: none;
+    border-bottom: solid grey thin;
+    font-size: 100%;
+    height: 5vh;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.input:focus{
+    border-bottom: solid thin #6000fc;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active
+{
+    background-color: rgb(230, 230, 230);
+ -webkit-box-shadow: 0 0 0 30px rgb(230, 230, 230) inset !important;
+}
+
+.submitbut{
+    background-color: #6000fc;
+    width: fit-content;
+    padding: 0.5% 5%;
+    border-radius: 10px;
+    align-self: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+}
+
+.plusform{
+    // max-height: 100vh;
+    // min-height: 100vh;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0%;
+    left: 0%;
+}
+.todoform{
+    // max-height: 100vh;
+    // min-height: 100vh;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0%;
+    left: 0%;
+}
+.plus:hover{
+    color:#6000fc;
+    cursor: pointer;
+    height: fit-content;
+    width: fit-content;
+}
+.todo{
+    cursor: pointer;
+}

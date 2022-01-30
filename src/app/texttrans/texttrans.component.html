@@ -1,0 +1,15 @@
+<div class="parent">
+    <div style="margin: 100px;">
+        
+        <h1>Let's translate your message!</h1>
+        <!-- <form [formGroup] = "formdata" (ngSubmit) = "onClickSubmit(formdata.value)" > -->
+        <input type="text" name="message" placeholder="Your message"(input)="tcode=$event.target.value">
+        <button (click)="submit()"  class="custom-btn btn-2" style="margin: 10px;" type = "submit" value = "submit">Let's Translate</button>
+<!-- </form> -->
+    </div>
+    
+    <div id="output" class="container">
+    
+    </div>
+    </div>
+    

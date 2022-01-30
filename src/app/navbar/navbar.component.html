@@ -1,0 +1,29 @@
+<div class="main">
+    <!-- <div class = "bg"><div class = "bg1"></div><div class = "bg2"></div></div> -->
+    <div class = "logo" routerLink = "/home">
+        <img src = "../../assets/images/logo.png" style = "height: 50px; width: auto;padding-left: 2vh;">
+    </div>
+    <div class="options">
+        <div class="nav-bar-item" routerLink={{y.link}} *ngFor="let y of navdata">
+            <div class="nav-bar-item-text">{{y.name}}</div>
+            <!-- <div *ngIf="y.name == 'Cart'"
+            style="position: absolute; top: -25%; right: -5%; background-color: var(--col4); border-radius: 50%; width: 0.8vw; color: white; text-align: center;">
+            {{cart}}</div> -->
+        </div>
+    </div>
+<div *ngIf="loggedin">
+    <div class = "welcome">
+        Welcome {{user}}!
+        <!-- <fa-icon routerLink = "/cart" style = "cursor: pointer;" [icon] = "cart"></fa-icon> -->
+    </div>
+
+    <div class = "logout" (click) = "logout()">
+        Logout
+    </div>
+
+   </div>
+
+    <!-- <div class="options">
+        <div *ngFor="let x of [1, 2, 3, 4, 5]" class="option">Options</div>
+    </div> -->
+</div>

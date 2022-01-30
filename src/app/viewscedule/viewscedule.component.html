@@ -1,0 +1,20 @@
+<div class="main">
+    <div class="title">
+        scedules
+    </div>
+    <div class="content">
+        <div class="descriptions" *ngFor="let x of scedule">
+            <!-- <div> {{x.payload.doc.data().sceduleName}} </div> -->
+            <div class="name">
+                {{x.payload.doc.data().sceduleName}}
+            </div>
+            <div class="type">
+                {{x.payload.doc.data().type}}
+            </div>
+            <div class="link">
+                Click to view scedule
+            </div>
+        </div>
+
+    </div>
+</div>

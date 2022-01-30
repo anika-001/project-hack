@@ -1,0 +1,81 @@
+.main{
+  background-color: white;
+  width: 100vw;
+  min-height: 100vh;
+}
+.bgimg-1 {
+  background-image: url("https://source.unsplash.com/1600x900/?happy");
+  height: 80vh;
+  width: 100%;
+  // position: relative;
+  // opacity: 0.70;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bgimg-2 {
+  background-image: url("https://source.unsplash.com/1600x900/?smile");
+  height: 100vh;
+  width: 100%;
+  // opacity: 0.70;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.caption span.border {
+  background-color: rgb(66, 65, 65);
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+.caption{
+  text-align: center;
+}
+.toptrans {
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  // background-color: aqua;
+}
+.content{
+  height: 50vh;
+  width: 60vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.name{
+  font-family: country;
+  color: white;
+  font-size: 800%;
+
+}
+.tagline{
+  font-family: country;
+  color: white;
+  font-size: 200%;
+}
+.info{
+  font-size: 140%;
+}
+.btn-go-portal {
+  text-decoration:none;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  padding: 12px 25px;
+  border-radius: 4px;
+  border: 2px
+  solid #fff;
+  background: #116466;
+  color: #fff;
+}

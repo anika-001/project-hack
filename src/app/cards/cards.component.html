@@ -1,0 +1,24 @@
+<a href="{{blog_link}}" *ngIf="type == 6">
+    <div class="card-1" >
+      <div class="card-image" [ngStyle]="{background: 'url(' + blog_image + ')','background-size':'100% 100%'}"></div>
+      <div class="card-text"style="color: #92b8ff">
+        <span class="date">{{blog_date}}</span>
+        <h2>{{blog_title}}</h2>
+        <p>{{blog_Author}}</p>
+      </div>
+      <!-- <div class="card-stats"style="background-color:#9370dc;">
+        <div class="stat">
+          <div class="value">4<sup>m</sup></div>
+          <div class="type">read</div>
+        </div>
+        <div class="stat border">
+          <div class="value">5123</div>
+          <div class="type">views</div>
+        </div>
+        <div class="stat">
+          <div class="value">32</div>
+          <div class="type">comments</div>
+        </div>
+      </div> -->
+    </div>
+  </a>

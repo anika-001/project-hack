@@ -1,0 +1,34 @@
+/* You can add global styles to this file, and also import other style files */
+
+body{
+    margin: 0;
+}
+
+*{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+:root {
+    --col4: rgb(178, 154, 231);
+    --col4d:rgb(45, 88, 72);
+    --col4l: rgb(66, 126, 103);
+    --col4vl: rgb(123, 228, 188);
+    --col5: rgb(212, 212, 212);
+    --appbg: #FFF4F4;
+ }
+
+.custbutton {
+    background-color: var(--col4);
+    position: relative;
+    border-radius: 2px;
+    padding: 2% 5%;
+    font-size: 150%;
+    color: white;
+    text-align: center;
+    align-items: center;
+    //box-shadow: 5px 2px 2px silver;
+    border: solid rgba(0, 0, 0, 0);
+    cursor: pointer;
+ }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/communigesture",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

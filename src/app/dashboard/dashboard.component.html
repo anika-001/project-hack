@@ -1,0 +1,57 @@
+<div class="main">
+    <div class = "title">
+        Mood Tracker
+    </div>
+    <!-- <div class="moodboard">
+        <div class = "moods">
+            <div class = "mood" *ngFor = "let x of usermoods">
+                <div class = "moodbox" *ngFor = "let ym of moods; let y = index" (click) = "getstory(x)" [ngClass] = "{
+                    'col0': x.payload.doc.data().mood == '0' && y == 0, 
+                    'col1': x.payload.doc.data().mood == '1' && y == 1, 
+                    'col2': x.payload.doc.data().mood == '2' && y == 2, 
+                    'col3': x.payload.doc.data().mood == '3' && y == 3, 
+                    'col4': x.payload.doc.data().mood == '4' && y == 4, 
+                    'col5': x.payload.doc.data().mood == '5' && y == 5 
+                }">
+
+                </div>
+                <div class = "moodbox md">{{getdate(x.payload.doc.id)}}</div>
+            </div>
+            <div class = "mood" *ngFor = "let x of temp">
+                <div class = "moodbox" *ngFor = "let x of moods; let i = index">
+
+                </div>
+                <div class = "moodbox md"></div>
+            </div>
+        </div>
+    </div> -->
+    <!-- <div class = "feeling">
+        <div class = "feelingcont">
+            <div class = "howfeeling">
+                How are you feeling today? -> Pick one ->
+            </div>
+            <div class = "colorpanel">
+                <div class = "coll col{{i}}" *ngFor = "let i of [0, 1, 2, 3, 4, 5]" (click) = "addmood(i)"></div>
+            </div>
+        </div>
+    </div> -->
+    <div class = "story">
+        <form [formGroup]="storyform" class = "enterstory">
+            Today's Entry
+            <textarea placeholder="Type your entry" formControlName="content"
+            type="text" class="ip"></textarea>
+            <button class = "custbutton" style="font-size: 50%;" (click) = "addstory()">Write to diary</button>
+        </form>
+        <div class = "stories">
+            <button class = "custbutton" (click) = "getstories()">Get all entries</button>
+            <div class = "storyouter" *ngFor = "let x of stories2; let i = index">
+                <div class = "date">{{getdate(stories2[i].payload.doc.id)}}</div>
+                <div class = "storyinner" *ngFor = "let y of stories[x.payload.doc.id]">
+                    <div class = "storytime">{{y.time}}</div>
+                    <div class = "storystory">{{y.story}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

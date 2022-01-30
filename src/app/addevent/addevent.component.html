@@ -1,0 +1,17 @@
+<div class = "main">
+    <div class = "formcont">
+        <div class = "formtitle">
+            Add Opportunity
+        </div>
+        <form [formGroup]="event" class = "form" >
+            <input type = "text" placeholder="Enter Opportunity name" class = "input" formControlName="EventName" >
+            <input type = "text" placeholder="Enter hashtag" class = "input" formControlName="Hashtag">
+            <input type = "text" placeholder="Enter link" class = "input" formControlName="Link">
+            <!-- Upload receipt: (Optional) -->
+            <!-- <input type="file" id="file" (change)="imagetUpload($event.target.files)" class="input"> -->
+            <div class = "submitbut" (click)="submitevent()">
+                Submit
+            </div>
+        </form>
+    </div>
+</div>

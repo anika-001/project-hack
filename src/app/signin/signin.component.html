@@ -1,0 +1,159 @@
+<div class="main">
+    
+  
+    <div class="authcard">
+        <div class="deets" style="right: 0;" [ngClass]="{
+            'rightregdeetscont': login,
+            'leftregdeetscont': !login
+        }">
+            <div
+                style="flex-basis: 70%; display: flex; flex-direction: column; text-align: center; justify-content: center; color: white;">
+                Havent Signed up yet? We have a lot in store for you</div>
+            <div class="switchbut" [ngClass]="{
+                'rightdeets': login,
+                'leftdeets': !login
+            }">Register now</div>
+        </div>
+        <div class="deets" style="left: 0;" [ngClass]="{
+            'rightlogindeetscont': !login,
+            'leftlogindeetscont': login
+        }">
+            <div
+                style="flex-basis: 70%; display: flex; flex-direction: column; text-align: center; justify-content: center; color: white;">
+                Already logged in? We missed you!</div>
+            <div class="switchbut" [ngClass]="{
+            'rightdeets': !login,
+            'leftdeets': login
+        }">Login</div>
+        </div>
+        <div class="imageslide" [ngClass]="{
+            'right': login,
+            'left': !login
+        }">
+            <div class="imageslideopaque" style="z-index: 1">
+                <div class="logincard" [ngClass]="{
+                    'cardleft': login,
+                    'cardright': !login
+                }">
+                    <div class="logintitle">
+                        Sign In
+                    </div>
+                    <div class="error" *ngIf="error">
+                        {{error}}
+                    </div>
+                    <form [formGroup]="formlogin" class="input reg">
+                        <div
+                            style="flex-basis: 90%; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                            <div *ngFor="let x of signindata">
+                                <input placeholder="{{x.placeholder}}" formControlName={{x.formname}} type={{x.type}}
+                                    class="ip" *ngIf="!x.error">
+                                <div *ngIf="formlog(x.formname).invalid && (formlog(x.formname).dirty || formlog(x.formname).touched)"
+                                    class="alert alert-danger">
+                                    <div *ngIf="formlog(x.formname).errors?.required">
+                                        {{x.formname}} is required.
+                                    </div>
+                                    <div *ngIf="formlog(x.formname).errors?.pattern">
+                                        {{x.patternerror}}
+                                    </div>
+                                </div>
+                                <!-- </div>
+                        </div> -->
+                                <!-- <div *ngIf="x.error" class="errormsg">
+                                    <div class="message sb1">
+                                        {{x.errormsg}}
+                                    </div>
+                                    <input placeholder={{x.placeholder}} formControlName={{x.formname}} type={{x.type}}
+                                        class="ip iperror">
+                                </div> -->
+                            </div>
+                            <a (click) = "forgot()" class="forgot" *ngIf = "!phoneno">
+                                Forgot Password?
+                            </a>
+                        </div>
+
+                        <div class="icons">
+                            <div class="icon" style="background-image: url(../../assets/images/google.png)"
+                                (click)="signupwithgoogle()"></div>
+                            <!-- <div class="icon" style="background-image: url(../../assets/images/facebook.png)"
+                                (click)="signupwithfacebook()"></div>
+                            <div class="icon" style="background-image: url(../../assets/images/twitter.png)"
+                                (click)="signupwithtwitter()"></div>
+                            <div class="icon" style="background-image: url(../../assets/images/github.png)"
+                                (click)="signupwithgithub()"></div> -->
+                        </div>
+                    </form>
+                    <div (click)="phone()" class="forget">
+                        <a *ngIf="phoneno">Sign in with email and Password</a>
+                        <a *ngIf="!phoneno">Sign in with phone number</a>
+                    </div>
+                    <!-- <div *ngIf="windowRef.confirmationResult">
+                        <hr>
+                        <label for="code">Enter your Verification Code Here</label><br>
+                        <input type="text" name="code" [(ngModel)]="verificationCode">
+
+                        <button (click)="verifyLoginCode()"
+                            style="background-color: var(--col4); cursor: pointer; color: white;">Verify</button>
+                    </div> -->
+                    <div id="recaptcha-container" [ngClass]="{
+                        'phno': phoneno,
+                        'nphno': !phoneno
+                    }"></div>
+                    <div class="submit" (click)="submit()">
+                        <div class="custbutton" [ngClass]="{
+                            'butdisabled': isdisabled(),
+                            'allow': !isdisabled()
+                        }">
+                            Login
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="imageslidetransparent" (click)="move()" style="z-index: 2">
+
+            </div>
+            <div class="imageslideopaque" style="z-index: 3">
+                <div class="regcard" [ngClass]="{
+                    'regcardleft': !login,
+                    'regcardright': login
+                }">
+                    <div class="logintitle">
+                        Sign Up
+                    </div>
+                    <div class="error" *ngIf="error">
+                        {{error}}
+                    </div>
+                    <form [formGroup]="formreg" class="input">
+                        <div class="regdiv">
+                            <div *ngFor="let x of signupdata" style="height: 20%;">
+                                <input placeholder="{{x.placeholder}}" formControlName={{x.formname}} type={{x.type}}
+                                    class="ip" *ngIf=!x.error>
+                                <div *ngIf="formregget(x.formname).invalid && (formregget(x.formname).dirty || formregget(x.formname).touched)"
+                                    class="alert alert-danger">
+                                    <div *ngIf="formregget(x.formname).errors?.required">
+                                        {{x.formname}} is required.
+                                    </div>
+                                    <div *ngIf="formregget(x.formname).errors?.pattern">
+                                        {{x.patternerror}}
+                                    </div>
+                                </div>
+                                <div *ngIf="formreg.hasError('notSame') && x.formname == 'confirmpassword' && !formregget('confirmpassword').errors?.required" class="alert alert-danger">
+                                    Passwords don't match
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+                    <div class="submit " (click)="submit()">
+                        <div class="custbutton" [ngClass]="{
+                            'butdisabled': isdisabled(),
+                            'allow': !isdisabled()
+                        }">
+                            Register
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

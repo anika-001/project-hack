@@ -1,0 +1,41 @@
+<div class = "main">
+    <!-- <div class = "header"></div> -->
+    <div class = "maincontent">
+        <div class = "filter">
+            <div class = "yourcomment">
+                <form [formGroup]="threadform" style="width: 100%;"><input class = "ip" placeholder="Add a Thread" type="text" style="width: 100%;" formControlName="newth"></form>
+                <div style="align-self: flex-start; margin-right: 10%; font-size: 50%; display:flex; width: 20vw; margin-left: 5px;"><button class = "custom-btn btn-4" style = "padding: 0% 0%;"(click) = "addthread()">Add</button>
+                    <button class = "custom-btn btn-4" style = "margin-left: 10px;"(click) = "addthreadAnon()">Add Anonymously</button></div>
+            </div>
+            <div class="threads" style="font-size: 130%; text-align: center; width: 100%;">Threads: </div>
+            <div *ngFor = "let x of allthreads" (click) = "showthread(x)" style = "margin: 5% 2%; cursor: pointer; text-decoration: underline;">
+                {{x.payload.doc.data().topic}}
+            </div>
+        </div>
+        <div class = "thread" *ngIf = "thread != ''">
+            <div class = "threadtitle">
+                {{thread.payload.doc.data().topic}}
+                <div style = "font-family: country; font-size: 50%;">~By {{thread.payload.doc.data().madeby}}</div>
+
+            </div>
+            <div class = "yourcomment">
+                <form [formGroup]="replyform" style="width: 100%;"><input class = "ip" placeholder="reply" type="text" style="width: 80%;" formControlName="replyin"></form>
+                <div style="align-self: flex-end; margin-right: 10%; display:flex; font-size: 70%;"><button class = "custom-btn btn-4" (click) = "reply()">Reply</button>
+                    <button class = "custom-btn btn-4" style = "margin-left: 10px;" (click) = "replyAnon()">Reply Anonymously</button></div>
+            </div>
+            <div class = "comments">
+                <div class = "comment" *ngFor = "let x of comments">
+                    <div class = "name">
+                        {{x.payload.doc.data().name}} says..
+                    </div>
+                    <div class = "comcontent">
+                        {{x.payload.doc.data().comment}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class = "thread" *ngIf = "thread == ''">
+           <div style="font-size: 400%; text-align: center; font-family: country;">Please select a thread or a new one</div>
+        </div>
+    </div>
+</div>

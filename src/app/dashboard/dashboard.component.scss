@@ -1,0 +1,269 @@
+.main {
+    height: 100vh;
+    max-width: 100vw;
+   // background: linear-gradient(to bottom, #00c6df, #ffffff 10%);
+    // background: #C9FFBF;  /* fallback for old browsers */
+    // background: -webkit-linear-gradient(to right, #FFAFBD, #C9FFBF);  /* Chrome 10-25, Safari 5.1-6 */
+    // background: linear-gradient(to right, #FFAFBD, #C9FFBF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    // background-color: aquamarine;
+    // overflow-x: hidden;
+}
+
+.title {
+    // background-color: var(--col4);
+    height: 20vh;
+    width: 100%;
+    font-family: country;
+    font-size: 300%;
+    padding: 5%;
+}
+
+.moodboard {
+    //background-color: rgb(252, 252, 252);
+    height: 47vh;
+    width: 100%;
+    display: flex;
+    border-top: solid thin silver;
+
+}
+
+.moods {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.mood {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 1vh 1vw 0vh 0vw;
+}
+
+.moodbox {
+    width: 100%;
+    height: 100%;
+    border-bottom: solid 1px silver;
+    border-right: solid 1px silver;
+    text-align: center;
+    cursor: pointer;
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    margin: 1vh 0vw 0vh 0vw;
+}
+
+.md {
+    border: none;
+}
+
+// .mooddate{
+//     height: 10vh;
+//     width: 100%;
+//     background-color: aqua;
+//     text-align: center;
+// }
+
+.feeling {
+    width: 100%;
+    height: 20vh;
+    // background-color: aqua;
+    display: flex;
+    align-items: center;
+}
+
+.feelingcont {
+    width: 100%;
+    height: 10vh;
+    // background-color: white;
+    display: flex;
+}
+
+.howfeeling {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: country;
+    font-size: 250%;
+}
+
+.colorpanel {
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+
+.coll {
+    height: 5vh;
+    width: 5vh;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.coll:hover {
+    opacity: 0.5;
+    border: solid thin black;
+}
+.col0 {
+    background-color: rgb(255, 0, 0);
+}
+
+.col1 {
+    background-color: rgb(255, 165, 0);
+}
+
+.col2 {
+    background-color: rgb(255, 255, 0);
+}
+
+.col3 {
+    background-color: rgb(0, 128, 0);
+}
+
+.col4 {
+    background-color: rgb(0, 0, 255);
+}
+
+.col5 {
+    background-color: rgb(75, 0, 130);
+}
+
+.rcol0 {
+    background-color: rgb(255, 127, 127);
+}
+
+.rcol1 {
+    background-color: rgb(255, 167, 127);
+}
+
+.rcol2 {
+    background-color: rgb(255, 255, 127);
+}
+
+.rcol3 {
+    background-color: rgb(63, 128, 63);
+}
+
+.rcol4 {
+    background-color: rgb(127, 127, 255);
+}
+
+.rcol5 {
+    background-color: rgb(138, 63, 130);
+}
+
+.stickypallete {
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    height: 10vh;
+    // background-color: chartreuse;
+    display: flex;
+    background: linear-gradient(to right, rgb(255, 0, 0), rgb(255, 81, 0), rgb(255, 255, 0), rgb(0, 255, 0), rgb(127, 187, 255), rgb(201, 1, 181));
+}
+
+.rect {
+    padding: 1%;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    font-size: 120%;
+    text-align: center;
+    color: black;
+    position: relative;
+    
+}
+
+// .rect::before{
+//     content: "";
+//     position: absolute;
+//     background-color: rgba(255, 255, 255, 0.5);
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+// }
+.story {
+    // background-color: darkcyan;
+    height: 100vh;
+    width: 100%;
+    // position: relative;
+    display: flex;
+    // background: #C9FFBF;  /* fallback for old browsers */
+    // background: -webkit-linear-gradient(to right, #FFAFBD, #C9FFBF);  /* Chrome 10-25, Safari 5.1-6 */
+    // background: linear-gradient(to right, #FFAFBD, #C9FFBF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+
+.enterstory {
+    width: 30vw;
+    height: 80vh;
+    // background-color: blue;
+    border-right: solid thin silver;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: country;
+    font-size: 200%;
+}
+
+.stories {
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ip {
+    width: 25vw;
+    height: 60vh;
+    font-size: 70%;
+    font-family: handwriting;
+}
+
+.date {
+    font-size: 150%;
+    font-family: handwriting;
+    font-weight: bold;
+}
+.storyouter {
+    width: 60vw;
+    padding: 2%;
+    background-color: rgb(250, 250, 250);
+    font-family: handwriting;
+    margin: 2% 0%;
+
+    background: rgba(248, 231, 28, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.storyinner {
+    padding: 2%;
+    border-top: solid thin silver;
+}
+
+.storytime {
+    font-family: handwriting;
+}
+
+.storystory {
+    font-family: handwriting;
+    margin-left: 5%;
+}
+
+
+
+
